@@ -7,14 +7,13 @@ class TankGame extends FlameGame {
   final world = Level(); // Suponiendo que tienes una clase Level que extiende World
 
   @override
-  Future<void> onLoad() async {
-    await super.onLoad(); // Asegúrate de llamar a super.onLoad() antes de añadir componentes
+  Future<void> onLoad() async{
+    await super.onLoad(); 
     cam = CameraComponent.withFixedResolution(
       world: world,
-      width: 640,
-      height: 360,
+      width: 1500,
+      height: 1000,
     );
-    cam.viewfinder.anchor = Anchor.topLeft;
     addAll([cam, world]);
   }
 }

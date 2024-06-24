@@ -9,10 +9,7 @@ class Level extends World {
   @override
   Future<void> onLoad() async {
     try {
-      level = await TiledComponent.load(
-        "assets/tiles/nivel1.tmx",
-        Vector2.all(50), // Asegúrate de que el tamaño del tile es correcto :v
-      );
+      level = await TiledComponent.load("assets/tiles/nivel1.tmx",Vector2.all(50),);
 
       add(level);
 
