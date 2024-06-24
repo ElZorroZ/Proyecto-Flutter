@@ -7,18 +7,58 @@ class Level extends World {
   late TiledComponent level;
 
   @override
-  Future<void> onLoad() async {
-    try {
-      level = await TiledComponent.load("assets/tiles/nivel1.tmx",Vector2.all(50),);
+  FutureOr<void> onLoad() async {
+    level = await TiledComponent.load("assets/tiles/nivel1.tmx",Vector2.all(50),);
 
-      add(level);
+    add(level);
 
-      await super.onLoad(); // Asegúrate de llamar a super.onLoad() después de agregar componentes uwuw
-    } catch (e) {
-      print("Error loading level: $e");
+    return super.onLoad(); // Asegúrate de llamar a super.onLoad() después de agregar componentes uwuw
     }
   }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 %%%%%%##################%########################################################*******************
