@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
-import 'package:Tank_Game/lib/levels/level1.dart'; // Asegúrate de que la ruta sea correcta
+import 'package:proyecto_flutter2/levels/level1.dart'; // Asegúrate de que la ruta sea correcta
 
 class TankGame extends FlameGame {
   late final CameraComponent cam;   

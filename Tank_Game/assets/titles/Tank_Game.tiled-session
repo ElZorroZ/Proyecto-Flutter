@@ -20,7 +20,7 @@
             "scaleInDock": 1.5,
             "scaleInEditor": 1
         },
-        "Nivel_Prueba.tmx": {
+        "nivel1.tmx": {
             "scale": 1.1993749999999999,
             "selectedLayer": 0,
             "viewCenter": {
@@ -28,7 +28,7 @@
                 "y": 320.5836373110996
             }
         },
-        "Nivel_Prueba.tmx#Tank Game": {
+        "nivel1.tmx#Tank Game": {
             "scaleInDock": 1
         },
         "Pared.tsx": {
@@ -57,7 +57,7 @@
         "C:/Users/Gaspar/Desktop/Proyecto-Flutter/proyecto_flutter2/assets/tiles/NivelPrueba2.tmx",
         "Terreno.tsx",
         "Pared.tsx",
-        "Nivel_Prueba.tmx",
+        "nivel1.tmx",
         "Terrain (16x16).tsx",
         "Agua.tsx",
         "Tank Game.tsx"
