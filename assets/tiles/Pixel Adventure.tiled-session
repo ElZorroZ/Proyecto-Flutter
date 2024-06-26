@@ -7,6 +7,17 @@
     "expandedProjectPaths": [
     ],
     "fileStates": {
+        "Level-01.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.6120312499999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 320.4032179897257,
+                "y": 175.55490937287973
+            }
+        }
     },
     "last.imagePath": "C:/Users/Spellthorn/Desktop/pa-versions/pixel_adventure/assets/images/Terrain",
     "map.height": 23,

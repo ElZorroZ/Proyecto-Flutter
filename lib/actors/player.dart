@@ -6,8 +6,12 @@ import 'package:pixel_adventure/pixel_adventure.dart';
 enum PlayerState {idle, running}
 
 class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventure> {
+
+  Player({position}) : super(position: position);
+
   late final SpriteAnimation idleAnimation;
-  final double StepTime = 0.05;
+  late final SpriteAnimation runningAnimation;
+  final double StepTime = 0.06;
 
 
   @override
@@ -17,16 +21,24 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   }
 
   void _loadAllAnimation(){
-    idleAnimation = SpriteAnimation.fromFrameData(game.images.fromCache("animaciones_tanque/move.png"), 
+    idleAnimation = _spriteAnimation("idle",1);
+
+    runningAnimation = _spriteAnimation("move2",4);
+    
+  
+  animations = {
+    PlayerState.idle: idleAnimation,
+    PlayerState.running: runningAnimation,
+  };
+  current= PlayerState.idle;
+  }
+
+  SpriteAnimation _spriteAnimation(String state, int amount){
+    return SpriteAnimation.fromFrameData(game.images.fromCache("animaciones_tanque/$state.png"), 
     SpriteAnimationData.sequenced(
-      amount: 2, 
+      amount: amount, 
       stepTime: StepTime,
       textureSize: Vector2.all(32)
     ));
-  
-  animations = {
-    PlayerState.idle: idleAnimation 
-  };
-  current= PlayerState.idle;
   }
 }
