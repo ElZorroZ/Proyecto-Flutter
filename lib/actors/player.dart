@@ -23,7 +23,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   void _loadAllAnimation(){
     idleAnimation = _spriteAnimation("idle",1);
 
-    runningAnimation = _spriteAnimation("move2",4);
+    runningAnimation = _spriteAnimation("move",10);
     
   
   animations = {
