@@ -7,7 +7,8 @@ enum PlayerState {idle, running}
 
 class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventure> {
 
-  Player({position}) : super(position: position);
+  String character;
+  Player({position,required this.character}) : super(position: position);
 
   late final SpriteAnimation idleAnimation;
   late final SpriteAnimation runningAnimation;
@@ -21,9 +22,9 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   }
 
   void _loadAllAnimation(){
-    idleAnimation = _spriteAnimation("idle_azul",1);
+    idleAnimation = _spriteAnimation("idle",1);
 
-    runningAnimation = _spriteAnimation("move_azul",10);
+    runningAnimation = _spriteAnimation("move",10);
     
   
   animations = {
@@ -34,7 +35,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   }
 
   SpriteAnimation _spriteAnimation(String state, int amount){
-    return SpriteAnimation.fromFrameData(game.images.fromCache("animaciones_tanque/tanque_azul/$state.png"), 
+    return SpriteAnimation.fromFrameData(game.images.fromCache("animaciones_tanque/$character/$state.png"), 
     SpriteAnimationData.sequenced(
       amount: amount, 
       stepTime: StepTime,
