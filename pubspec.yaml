@@ -63,6 +63,8 @@ flutter:
     - assets/tiles/
     - assets/images/Terrain/
     - assets/images/animaciones_tanque/
+    - assets/images/animaciones_tanque/tanque_azul/
+    - assets/images/animaciones_tanque/tanque_rojo/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
