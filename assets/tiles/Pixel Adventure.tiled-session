@@ -6,20 +6,38 @@
     "activeFile": "",
     "expandedProjectPaths": [
     ],
+    "file.lastUsedOpenFilter": "Todos los archivos (*)",
     "fileStates": {
         "Level-01.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.6120312499999998,
-            "selectedLayer": 0,
+            "scale": 1.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 320.4032179897257,
-                "y": 175.55490937287973
+                "x": 326,
+                "y": 224
             }
+        },
+        "Level-02.tmx": {
+            "scale": 1.324320652173913,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 318.65394480352927,
+                "y": 297.51102903457473
+            }
+        },
+        "Terrain0v0.tsx": {
+            "scaleInEditor": 1
+        },
+        "cespedconbarro.tsx": {
+            "scaleInDock": 1
+        },
+        "wall.tsx": {
+            "scaleInDock": 1
         }
     },
-    "last.imagePath": "C:/Users/Spellthorn/Desktop/pa-versions/pixel_adventure/assets/images/Terrain",
+    "last.imagePath": "C:/Users/Gaspar/Documents/GitHub/pixel_adventure-6ed3aa7d04d5ce5e413cfa69c4a0a7d51bbcf431/assets/images/Terrain",
     "map.height": 23,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
@@ -29,6 +47,7 @@
     ],
     "project": "Pixel Adventure.tiled-project",
     "recentFiles": [
+        "Terrain0v0.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
