@@ -3,8 +3,9 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "Level-02.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "file.lastUsedOpenFilter": "Todos los archivos (*)",
     "fileStates": {
@@ -20,6 +21,9 @@
             }
         },
         "Level-02.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
             "scale": 1.324320652173913,
             "selectedLayer": 1,
             "viewCenter": {
@@ -27,7 +31,11 @@
                 "y": 297.51102903457473
             }
         },
+        "Pixel Adventure.tsx": {
+            "scaleInDock": 1
+        },
         "Terrain0v0.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "cespedconbarro.tsx": {
@@ -44,9 +52,13 @@
     "map.tileWidth": 16,
     "map.width": 40,
     "openFiles": [
+        "Level-01.tmx",
+        "Level-02.tmx"
     ],
     "project": "Pixel Adventure.tiled-project",
     "recentFiles": [
+        "Level-01.tmx",
+        "Level-02.tmx",
         "Terrain0v0.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",

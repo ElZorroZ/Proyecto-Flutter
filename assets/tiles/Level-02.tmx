@@ -30,7 +30,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="Spawn">
-  <object id="1" name="Player1" type="Player1" x="224.427" y="225.392" width="43.4235" height="45.9048"/>
+  <object id="1" name="Player1" type="Player1" x="225.937" y="225.392" width="43.4235" height="45.9048"/>
   <object id="2" name="Player2" type="Player2" x="322.358" y="160.203" width="44.0438" height="47.5498"/>
  </objectgroup>
 </map>
