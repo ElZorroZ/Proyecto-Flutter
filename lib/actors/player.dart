@@ -1,7 +1,8 @@
 import 'dart:async';
-
+import 'package:pixel_adventure/actors/bullet.dart';
 import 'package:flame/components.dart';
 import 'package:pixel_adventure/pixel_adventure.dart';
+import 'dart:math' as math;
 
 enum PlayerState {idle, running}
 
@@ -16,7 +17,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   late final SpriteAnimation runningAnimation;
   final double StepTime = 0.06;
 
-  PlayerDirection playerDirection = PlayerDirection.move;
+  PlayerDirection playerDirection = PlayerDirection.none;
   double moveSpeed=100;
   Vector2 velocity= Vector2.zero();
 
@@ -36,17 +37,18 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
 
   void _updatePlayerMovement(double dt){
     double dirx=0.0;
+    double diry=0.0;
     switch(playerDirection){
       case PlayerDirection.none:
-      dirx=0;
+        position+=velocity * dt;
         break;
       case PlayerDirection.move:
-      dirx+=moveSpeed;
+        dirx+=moveSpeed;
+        velocity = Vector2(dirx, diry);
+        position+=velocity * dt;
         break;
       default:
     }
-    velocity = Vector2(dirx, dirx);
-    position+=velocity * dt;
   }
   void _loadAllAnimation(){
     idleAnimation = _spriteAnimation("idle",1);
@@ -68,5 +70,12 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
       stepTime: StepTime,
       textureSize: Vector2.all(32)
     ));
+  }
+  void shoot(double dirx, diry){
+    game.add(
+      BulletComponent(
+        position: Vector2(dirx,diry),
+      ),
+    );
   }
 }

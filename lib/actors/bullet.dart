@@ -1,19 +1,35 @@
 import 'package:flame/components.dart';
-import 'package:flame_work_shop/level.dart';
+import 'package:pixel_adventure/pixel_adventure.dart';
 
-class BulletComponent extends SpriteAnimationComponent{
+class BulletComponent extends SpriteAnimationComponent
+    with HasGameRef<PixelAdventure>{
+  
+  BulletComponent({super.position});
+
+  static const BULLET_SPEED= 100;
+
   @override
   Future<void>onLoad()async{
     anchor= Anchor.center;
-    position= pixel_adventure.size/2;
+    position= game.size/2;
     size=Vector2(200,170);
-    animation=await pixel_adventure.loadSpriteAnimation(
+    animation=await game.loadSpriteAnimation(
       'bullet.png',
       SpriteAnimationData.sequenced(
-        amount: 2,
+        amount: 1,
         stepTime: 0.1, 
         textureSize: Vector2.all(450)
         ),
     );
+  }
+
+  @override
+  void update(double dt){
+    super.update(dt);
+    position.x+=BULLET_SPEED*dt;
+
+    if(position.x+size.x<0){
+      removeFromParent();
+    }
   }
 }
