@@ -6,19 +6,19 @@ class BulletComponent extends SpriteAnimationComponent
   
   BulletComponent({super.position});
 
-  static const BULLET_SPEED= 100;
+  static const BULLET_SPEED= 400;
 
   @override
   Future<void>onLoad()async{
     anchor= Anchor.center;
-    position= game.size/2;
-    size=Vector2(200,170);
+    position= position;
+    size=Vector2(300,170);
     animation=await game.loadSpriteAnimation(
-      'bullet.png',
+      'animaciones_tanque/bullet.png',
       SpriteAnimationData.sequenced(
-        amount: 1,
+        amount: 1,  
         stepTime: 0.1, 
-        textureSize: Vector2.all(450)
+        textureSize: Vector2.all(20)
         ),
     );
   }

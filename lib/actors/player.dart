@@ -17,7 +17,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   late final SpriteAnimation runningAnimation;
   final double StepTime = 0.06;
 
-  PlayerDirection playerDirection = PlayerDirection.none;
+  PlayerDirection playerDirection = PlayerDirection.move;
   double moveSpeed=100;
   Vector2 velocity= Vector2.zero();
 
@@ -46,6 +46,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
         dirx+=moveSpeed;
         velocity = Vector2(dirx, diry);
         position+=velocity * dt;
+        shoot(dirx, diry,position);
         break;
       default:
     }
@@ -60,7 +61,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
     PlayerState.idle: idleAnimation,
     PlayerState.running: runningAnimation,
   };
-  current= PlayerState.idle;
+  current= PlayerState.running;
   }
 
   SpriteAnimation _spriteAnimation(String state, int amount){
@@ -71,10 +72,10 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
       textureSize: Vector2.all(32)
     ));
   }
-  void shoot(double dirx, diry){
+  void shoot(double dirx, diry,position){
     game.add(
       BulletComponent(
-        position: Vector2(dirx,diry),
+        position: position,
       ),
     );
   }
