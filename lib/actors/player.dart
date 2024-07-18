@@ -20,7 +20,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   late final JoystickComponent joystick;
   final double StepTime = 0.06;
 
-  PlayerDirection playerDirection = PlayerDirection.move;
+  PlayerDirection playerDirection = PlayerDirection.none;
   double moveSpeed=100;
   Vector2 velocity= Vector2.zero();
 
@@ -64,7 +64,6 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
         dirx+=moveSpeed;
         velocity = Vector2(dirx, diry);
         position+=velocity * dt;
-        shoot(dirx, diry,position);
         break;
       default:
     }
@@ -89,10 +88,10 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
       textureSize: Vector2.all(32)
     ));
   }
-  void shoot(double dirx, diry,position){
+  void shoot(double dirx, diry){
     game.add(
       BulletComponent(
-        position: position,
+        position: Vector2(dirx,diry),
       ),
     );
   }

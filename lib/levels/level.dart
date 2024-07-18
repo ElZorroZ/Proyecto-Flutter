@@ -26,12 +26,6 @@ class Level extends World {
           final player=Player(character:"tanque_rojo",position: Vector2(spwanPoint.x,spwanPoint.y));
           add(player);
           break;
-        /*case "Joystick1":
-          final joystick=Joystick(player:"tanque_azul",position: Vector2(spwanPoint.x,spwanPoint.y));
-          add(joystick);
-        case "Joystick2":
-          final joystick=Joystick(player:"tanque_rojo",position: Vector2(spwanPoint.x,spwanPoint.y));
-          add(joystick);*/
         default:
       }
     }
